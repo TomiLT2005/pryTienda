@@ -1,0 +1,471 @@
+﻿namespace pryTienda
+{
+    partial class frmInicio
+    {
+        /// <summary>
+        /// Variable del diseñador necesaria.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Limpiar los recursos que se estén usando.
+        /// </summary>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Código generado por el Diseñador de Windows Forms
+
+        /// <summary>
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
+            this.tabCtrlMenu = new MaterialSkin.Controls.MaterialTabControl();
+            this.tabPageHome = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
+            this.btnVolver = new MaterialSkin.Controls.MaterialButton();
+            this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
+            this.txtBuscar = new MaterialSkin.Controls.MaterialTextBox2();
+            this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
+            this.btnModificar = new MaterialSkin.Controls.MaterialButton();
+            this.btnAgregar = new MaterialSkin.Controls.MaterialButton();
+            this.txtStock = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtPrecio = new MaterialSkin.Controls.MaterialTextBox2();
+            this.cmbCategoria = new MaterialSkin.Controls.MaterialComboBox();
+            this.txtDesc = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtNombre = new MaterialSkin.Controls.MaterialTextBox2();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.tabPageSalir = new System.Windows.Forms.TabPage();
+            this.imgList = new System.Windows.Forms.ImageList(this.components);
+            this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tabCtrlMenu.SuspendLayout();
+            this.tabPageHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidacion)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tabCtrlMenu
+            // 
+            this.tabCtrlMenu.Controls.Add(this.tabPageHome);
+            this.tabCtrlMenu.Controls.Add(this.tabPageSalir);
+            this.tabCtrlMenu.Depth = 0;
+            this.tabCtrlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCtrlMenu.ImageList = this.imgList;
+            this.tabCtrlMenu.Location = new System.Drawing.Point(3, 64);
+            this.tabCtrlMenu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabCtrlMenu.Multiline = true;
+            this.tabCtrlMenu.Name = "tabCtrlMenu";
+            this.tabCtrlMenu.SelectedIndex = 0;
+            this.tabCtrlMenu.Size = new System.Drawing.Size(1004, 625);
+            this.tabCtrlMenu.TabIndex = 1;
+            this.tabCtrlMenu.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabCtrlMenu_Selecting);
+            // 
+            // tabPageHome
+            // 
+            this.tabPageHome.Controls.Add(this.btnCancelar);
+            this.tabPageHome.Controls.Add(this.btnVolver);
+            this.tabPageHome.Controls.Add(this.btnBuscar);
+            this.tabPageHome.Controls.Add(this.txtBuscar);
+            this.tabPageHome.Controls.Add(this.btnEliminar);
+            this.tabPageHome.Controls.Add(this.btnModificar);
+            this.tabPageHome.Controls.Add(this.btnAgregar);
+            this.tabPageHome.Controls.Add(this.txtStock);
+            this.tabPageHome.Controls.Add(this.txtPrecio);
+            this.tabPageHome.Controls.Add(this.cmbCategoria);
+            this.tabPageHome.Controls.Add(this.txtDesc);
+            this.tabPageHome.Controls.Add(this.txtNombre);
+            this.tabPageHome.Controls.Add(this.dgvDatos);
+            this.tabPageHome.ImageKey = "imgHome.png";
+            this.tabPageHome.Location = new System.Drawing.Point(4, 39);
+            this.tabPageHome.Name = "tabPageHome";
+            this.tabPageHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageHome.Size = new System.Drawing.Size(996, 582);
+            this.tabPageHome.TabIndex = 0;
+            this.tabPageHome.Text = "Home";
+            this.tabPageHome.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.AutoSize = false;
+            this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancelar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnCancelar.Depth = 0;
+            this.btnCancelar.HighEmphasis = true;
+            this.btnCancelar.Icon = null;
+            this.btnCancelar.Location = new System.Drawing.Point(907, 42);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnCancelar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnCancelar.Size = new System.Drawing.Size(50, 48);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnCancelar.UseAccentColor = false;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.AutoSize = false;
+            this.btnVolver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnVolver.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnVolver.Depth = 0;
+            this.btnVolver.HighEmphasis = true;
+            this.btnVolver.Icon = null;
+            this.btnVolver.Location = new System.Drawing.Point(846, 42);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnVolver.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnVolver.Size = new System.Drawing.Size(50, 48);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnVolver.UseAccentColor = false;
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AutoSize = false;
+            this.btnBuscar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscar.Depth = 0;
+            this.btnBuscar.HighEmphasis = true;
+            this.btnBuscar.Icon = global::pryTienda.Properties.Resources.imgBuscar;
+            this.epValidacion.SetIconAlignment(this.btnBuscar, System.Windows.Forms.ErrorIconAlignment.TopRight);
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.ImageKey = "imgBuscar.png";
+            this.btnBuscar.ImageList = this.imgList;
+            this.btnBuscar.Location = new System.Drawing.Point(691, 42);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Size = new System.Drawing.Size(58, 48);
+            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscar.UseAccentColor = false;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.AnimateReadOnly = false;
+            this.txtBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBuscar.Depth = 0;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBuscar.HideSelection = true;
+            this.txtBuscar.Hint = "Buscar";
+            this.txtBuscar.LeadingIcon = null;
+            this.txtBuscar.Location = new System.Drawing.Point(346, 42);
+            this.txtBuscar.MaxLength = 32767;
+            this.txtBuscar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.PasswordChar = '\0';
+            this.txtBuscar.PrefixSuffixText = null;
+            this.txtBuscar.ReadOnly = false;
+            this.txtBuscar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscar.SelectedText = "";
+            this.txtBuscar.SelectionLength = 0;
+            this.txtBuscar.SelectionStart = 0;
+            this.txtBuscar.ShortcutsEnabled = true;
+            this.txtBuscar.Size = new System.Drawing.Size(329, 48);
+            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TabStop = false;
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscar.TrailingIcon = null;
+            this.txtBuscar.UseSystemPasswordChar = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.AutoSize = false;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEliminar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnEliminar.Depth = 0;
+            this.btnEliminar.HighEmphasis = true;
+            this.btnEliminar.Icon = null;
+            this.btnEliminar.Location = new System.Drawing.Point(16, 578);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnEliminar.Size = new System.Drawing.Size(255, 37);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnEliminar.UseAccentColor = false;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.AutoSize = false;
+            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnModificar.Depth = 0;
+            this.btnModificar.HighEmphasis = true;
+            this.btnModificar.Icon = null;
+            this.btnModificar.Location = new System.Drawing.Point(15, 519);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnModificar.Size = new System.Drawing.Size(255, 37);
+            this.btnModificar.TabIndex = 10;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnModificar.UseAccentColor = false;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.AutoSize = false;
+            this.btnAgregar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAgregar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAgregar.Depth = 0;
+            this.btnAgregar.HighEmphasis = true;
+            this.btnAgregar.Icon = null;
+            this.btnAgregar.Location = new System.Drawing.Point(15, 459);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAgregar.Size = new System.Drawing.Size(255, 37);
+            this.btnAgregar.TabIndex = 9;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAgregar.UseAccentColor = false;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtStock
+            // 
+            this.txtStock.AnimateReadOnly = false;
+            this.txtStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtStock.Depth = 0;
+            this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtStock.HideSelection = true;
+            this.txtStock.Hint = "Stock";
+            this.txtStock.LeadingIcon = null;
+            this.txtStock.Location = new System.Drawing.Point(16, 382);
+            this.txtStock.MaxLength = 32767;
+            this.txtStock.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtStock.Name = "txtStock";
+            this.txtStock.PasswordChar = '\0';
+            this.txtStock.PrefixSuffixText = null;
+            this.txtStock.ReadOnly = false;
+            this.txtStock.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtStock.SelectedText = "";
+            this.txtStock.SelectionLength = 0;
+            this.txtStock.SelectionStart = 0;
+            this.txtStock.ShortcutsEnabled = true;
+            this.txtStock.Size = new System.Drawing.Size(254, 48);
+            this.txtStock.TabIndex = 8;
+            this.txtStock.TabStop = false;
+            this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtStock.TrailingIcon = null;
+            this.txtStock.UseSystemPasswordChar = false;
+            this.txtStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStock_KeyPress);
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.AnimateReadOnly = false;
+            this.txtPrecio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtPrecio.Depth = 0;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecio.HideSelection = true;
+            this.txtPrecio.Hint = "Precio";
+            this.txtPrecio.LeadingIcon = null;
+            this.txtPrecio.Location = new System.Drawing.Point(16, 294);
+            this.txtPrecio.MaxLength = 32767;
+            this.txtPrecio.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.PasswordChar = '\0';
+            this.txtPrecio.PrefixSuffixText = null;
+            this.txtPrecio.ReadOnly = false;
+            this.txtPrecio.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPrecio.SelectedText = "";
+            this.txtPrecio.SelectionLength = 0;
+            this.txtPrecio.SelectionStart = 0;
+            this.txtPrecio.ShortcutsEnabled = true;
+            this.txtPrecio.Size = new System.Drawing.Size(254, 48);
+            this.txtPrecio.TabIndex = 7;
+            this.txtPrecio.TabStop = false;
+            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPrecio.TrailingIcon = null;
+            this.txtPrecio.UseSystemPasswordChar = false;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.AutoResize = false;
+            this.cmbCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbCategoria.Depth = 0;
+            this.cmbCategoria.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbCategoria.DropDownHeight = 174;
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoria.DropDownWidth = 121;
+            this.cmbCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Hint = "Categorías";
+            this.cmbCategoria.IntegralHeight = false;
+            this.cmbCategoria.ItemHeight = 43;
+            this.cmbCategoria.Location = new System.Drawing.Point(16, 211);
+            this.cmbCategoria.MaxDropDownItems = 4;
+            this.cmbCategoria.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(254, 49);
+            this.cmbCategoria.StartIndex = 0;
+            this.cmbCategoria.TabIndex = 6;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.AnimateReadOnly = false;
+            this.txtDesc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtDesc.Depth = 0;
+            this.txtDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDesc.HideSelection = true;
+            this.txtDesc.Hint = "Descripcion";
+            this.txtDesc.LeadingIcon = null;
+            this.txtDesc.Location = new System.Drawing.Point(16, 123);
+            this.txtDesc.MaxLength = 32767;
+            this.txtDesc.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.PasswordChar = '\0';
+            this.txtDesc.PrefixSuffixText = null;
+            this.txtDesc.ReadOnly = false;
+            this.txtDesc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDesc.SelectedText = "";
+            this.txtDesc.SelectionLength = 0;
+            this.txtDesc.SelectionStart = 0;
+            this.txtDesc.ShortcutsEnabled = true;
+            this.txtDesc.Size = new System.Drawing.Size(254, 48);
+            this.txtDesc.TabIndex = 4;
+            this.txtDesc.TabStop = false;
+            this.txtDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDesc.TrailingIcon = null;
+            this.txtDesc.UseSystemPasswordChar = false;
+            this.txtDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDesc_KeyPress);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.AnimateReadOnly = false;
+            this.txtNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtNombre.Depth = 0;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.HideSelection = true;
+            this.txtNombre.Hint = "Nombre";
+            this.txtNombre.LeadingIcon = null;
+            this.txtNombre.Location = new System.Drawing.Point(16, 42);
+            this.txtNombre.MaxLength = 32767;
+            this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '\0';
+            this.txtNombre.PrefixSuffixText = null;
+            this.txtNombre.ReadOnly = false;
+            this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNombre.SelectedText = "";
+            this.txtNombre.SelectionLength = 0;
+            this.txtNombre.SelectionStart = 0;
+            this.txtNombre.ShortcutsEnabled = true;
+            this.txtNombre.Size = new System.Drawing.Size(254, 48);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.TabStop = false;
+            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNombre.TrailingIcon = null;
+            this.txtNombre.UseSystemPasswordChar = false;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // dgvDatos
+            // 
+            this.dgvDatos.AllowUserToAddRows = false;
+            this.dgvDatos.AllowUserToResizeColumns = false;
+            this.dgvDatos.AllowUserToResizeRows = false;
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Location = new System.Drawing.Point(346, 104);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDatos.Size = new System.Drawing.Size(611, 511);
+            this.dgvDatos.TabIndex = 1;
+            // 
+            // tabPageSalir
+            // 
+            this.tabPageSalir.Location = new System.Drawing.Point(4, 39);
+            this.tabPageSalir.Name = "tabPageSalir";
+            this.tabPageSalir.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSalir.Size = new System.Drawing.Size(996, 582);
+            this.tabPageSalir.TabIndex = 1;
+            this.tabPageSalir.Text = "Salir";
+            this.tabPageSalir.UseVisualStyleBackColor = true;
+            // 
+            // imgList
+            // 
+            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
+            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgList.Images.SetKeyName(0, "imgHome.png");
+            this.imgList.Images.SetKeyName(1, "imgBuscar.png");
+            // 
+            // epValidacion
+            // 
+            this.epValidacion.ContainerControl = this;
+            // 
+            // frmInicio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1010, 692);
+            this.Controls.Add(this.tabCtrlMenu);
+            this.DrawerTabControl = this.tabCtrlMenu;
+            this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tienda";
+            this.Load += new System.EventHandler(this.frmInicio_Load);
+            this.tabCtrlMenu.ResumeLayout(false);
+            this.tabPageHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epValidacion)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private MaterialSkin.Controls.MaterialTabControl tabCtrlMenu;
+        private System.Windows.Forms.TabPage tabPageHome;
+        private MaterialSkin.Controls.MaterialButton btnCancelar;
+        private MaterialSkin.Controls.MaterialButton btnVolver;
+        private MaterialSkin.Controls.MaterialButton btnBuscar;
+        private MaterialSkin.Controls.MaterialTextBox2 txtBuscar;
+        private MaterialSkin.Controls.MaterialButton btnEliminar;
+        private MaterialSkin.Controls.MaterialButton btnModificar;
+        private MaterialSkin.Controls.MaterialButton btnAgregar;
+        private MaterialSkin.Controls.MaterialTextBox2 txtStock;
+        private MaterialSkin.Controls.MaterialTextBox2 txtPrecio;
+        private MaterialSkin.Controls.MaterialComboBox cmbCategoria;
+        private MaterialSkin.Controls.MaterialTextBox2 txtDesc;
+        private MaterialSkin.Controls.MaterialTextBox2 txtNombre;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.TabPage tabPageSalir;
+        private System.Windows.Forms.ErrorProvider epValidacion;
+        private System.Windows.Forms.ImageList imgList;
+    }
+}
+
