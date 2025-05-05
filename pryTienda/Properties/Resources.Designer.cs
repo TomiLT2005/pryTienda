@@ -83,9 +83,9 @@ namespace pryTienda.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap imgBuscar {
+        internal static System.Drawing.Bitmap imgBuscar1 {
             get {
-                object obj = ResourceManager.GetObject("imgBuscar", resourceCulture);
+                object obj = ResourceManager.GetObject("imgBuscar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

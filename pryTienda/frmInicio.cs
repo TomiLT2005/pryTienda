@@ -140,7 +140,6 @@ namespace pryTienda
 
 
         //Eventos de Botones Secundarios (Buscar, Volver y Cancelar)//
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string busqueda = txtBuscar.Text;
@@ -172,20 +171,30 @@ namespace pryTienda
 
 
 
+        //Método para obtener el valor de la fila seleccionada
+        private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs f)
+        {
+            if (f.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvDatos.Rows[f.RowIndex];
+
+                codigoSeleccionado = Convert.ToInt32(fila.Cells["Codigo"].Value);
+
+                txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
+                txtDesc.Text = fila.Cells["Descripcion"].Value.ToString();
+                txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
+                txtStock.Text = fila.Cells["Stock"].Value.ToString();
+                cmbCategoria.SelectedValue = fila.Cells["CategoriaId"].Value;
+
+                btnAgregar.Enabled = false;
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
+            }
+        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-        //Eventos - Control Ingreso de Datos//
+        //Controles (Ingreso de Datos, Validación y Limpiar)
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
@@ -223,8 +232,7 @@ namespace pryTienda
         }
 
 
-
-        //Metodo Limpiar Campos//   
+  
         private void LimpiarCampos(MaterialTextBox2 txtNombre, MaterialTextBox2 txtDesc, MaterialTextBox2 txtPrecio, MaterialTextBox2 txtStock, MaterialComboBox cmbCategoria)
         {
             txtNombre.Text = "";
@@ -236,7 +244,6 @@ namespace pryTienda
 
 
 
-        //Metodo Validar Campos//
         private bool validarCampos()
         {
             epValidacion.Clear();
@@ -328,6 +335,6 @@ namespace pryTienda
             dgv.MultiSelect = false; // Permitir sólo una selección a la vez
         }
 
-      
+        
     }
 }
