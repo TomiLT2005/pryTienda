@@ -35,6 +35,7 @@
             this.btnCancelar = new MaterialSkin.Controls.MaterialButton();
             this.btnVolver = new MaterialSkin.Controls.MaterialButton();
             this.btnBuscar = new MaterialSkin.Controls.MaterialButton();
+            this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.txtBuscar = new MaterialSkin.Controls.MaterialTextBox2();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
             this.btnModificar = new MaterialSkin.Controls.MaterialButton();
@@ -46,8 +47,8 @@
             this.txtNombre = new MaterialSkin.Controls.MaterialTextBox2();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.tabPageSalir = new System.Windows.Forms.TabPage();
-            this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnlupa = new System.Windows.Forms.Button();
             this.tabCtrlMenu.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -72,6 +73,7 @@
             // 
             // tabPageHome
             // 
+            this.tabPageHome.Controls.Add(this.btnlupa);
             this.tabPageHome.Controls.Add(this.btnCancelar);
             this.tabPageHome.Controls.Add(this.btnVolver);
             this.tabPageHome.Controls.Add(this.btnBuscar);
@@ -157,6 +159,13 @@
             this.btnBuscar.UseAccentColor = false;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // imgList
+            // 
+            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
+            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgList.Images.SetKeyName(0, "imgHome.png");
+            this.imgList.Images.SetKeyName(1, "imgBuscar.png");
             // 
             // txtBuscar
             // 
@@ -416,16 +425,17 @@
             this.tabPageSalir.Text = "Salir";
             this.tabPageSalir.UseVisualStyleBackColor = true;
             // 
-            // imgList
-            // 
-            this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
-            this.imgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgList.Images.SetKeyName(0, "imgHome.png");
-            this.imgList.Images.SetKeyName(1, "imgBuscar.png");
-            // 
             // epValidacion
             // 
             this.epValidacion.ContainerControl = this;
+            // 
+            // btnlupa
+            // 
+            this.btnlupa.Location = new System.Drawing.Point(756, 42);
+            this.btnlupa.Name = "btnlupa";
+            this.btnlupa.Size = new System.Drawing.Size(58, 48);
+            this.btnlupa.TabIndex = 16;
+            this.btnlupa.UseVisualStyleBackColor = false;
             // 
             // frmInicio
             // 
@@ -466,6 +476,7 @@
         private System.Windows.Forms.TabPage tabPageSalir;
         private System.Windows.Forms.ErrorProvider epValidacion;
         private System.Windows.Forms.ImageList imgList;
+        private System.Windows.Forms.Button btnlupa;
     }
 }
 

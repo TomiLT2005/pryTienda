@@ -28,7 +28,7 @@ namespace pryTienda
 
             MaterialSkinManager materialSkinManager =  MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
             materialSkinManager.ColorScheme = new ColorScheme(
             Primary.Red700,   // Rojo fuerte para los elementos principales
@@ -284,23 +284,48 @@ namespace pryTienda
         //Estilo al DataGridView///
         private void EstilizarDataGridView(DataGridView dgv)
         {
-            dgv.BackgroundColor = Color.White;
-            dgv.BorderStyle = BorderStyle.None;
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgv.EnableHeadersVisualStyles = false;
+            dgv.EnableHeadersVisualStyles = false; // Evitar el estilo predeterminado de encabezados de columna
 
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(183, 28, 28); // Rojo oscuro
+            // Fondo general (oscuro pero elegante)
+            dgv.BackgroundColor = Color.FromArgb(18, 18, 18); // Fondo oscuro
+            dgv.BorderStyle = BorderStyle.None;
+
+            // Estilo de cabecera (fondo oscuro con una sombra suave y texto en blanco)
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 26, 26); // Gris oscuro
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
-            dgv.DefaultCellStyle.BackColor = Color.White;
-            dgv.DefaultCellStyle.ForeColor = Color.Black;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(244, 67, 54); // Rojo más claro al seleccionar
-            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
-            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            // Bordes suaves en la cabecera
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
+            // Estilo de celdas (más oscuro y contrastante con el texto blanco)
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(33, 33, 33); // Gris oscuro para las celdas
+            dgv.DefaultCellStyle.ForeColor = Color.White;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 9); // Tipografía moderna
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(66, 66, 66); // Color suave al seleccionar una fila
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Red; // Texto rojo para selección
+
+            // Bordes suaves alrededor de las celdas
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal; // Bordes horizontales de las celdas
+            dgv.GridColor = Color.FromArgb(50, 50, 50); // Gris suave para las líneas de la cuadrícula
+
+            // Personalizar filas
+            dgv.RowsDefaultCellStyle.BackColor = Color.FromArgb(24, 24, 24); // Fondo más oscuro para las filas
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(36, 36, 36); // Alternar filas más suaves
+
+            // Eliminamos bordes en las filas y cabecera
             dgv.RowHeadersVisible = false;
+
+            // Desactivar botones de agregados y eliminación de filas
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToResizeRows = false;
+            dgv.ReadOnly = true; // Sólo lectura para mayor control
+
+            // Hacer que el DataGridView sea más limpio (sin líneas extra)
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Selección de fila completa
+            dgv.MultiSelect = false; // Permitir sólo una selección a la vez
         }
 
       
