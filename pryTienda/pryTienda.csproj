@@ -97,5 +97,14 @@
   <ItemGroup>
     <None Include="Resources\imgBuscar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImgEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgAgregar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

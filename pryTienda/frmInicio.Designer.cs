@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.tabCtrlMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPageHome = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new MaterialSkin.Controls.MaterialTextBox2();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
@@ -46,8 +48,6 @@
             this.tabPageSalir = new System.Windows.Forms.TabPage();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabCtrlMenu.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -61,13 +61,12 @@
             this.tabCtrlMenu.Depth = 0;
             this.tabCtrlMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabCtrlMenu.ImageList = this.imgList;
-            this.tabCtrlMenu.Location = new System.Drawing.Point(4, 79);
-            this.tabCtrlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCtrlMenu.Location = new System.Drawing.Point(3, 64);
             this.tabCtrlMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabCtrlMenu.Multiline = true;
             this.tabCtrlMenu.Name = "tabCtrlMenu";
             this.tabCtrlMenu.SelectedIndex = 0;
-            this.tabCtrlMenu.Size = new System.Drawing.Size(1170, 769);
+            this.tabCtrlMenu.Size = new System.Drawing.Size(1004, 692);
             this.tabCtrlMenu.TabIndex = 1;
             this.tabCtrlMenu.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabCtrlMenu_Selecting);
             // 
@@ -87,16 +86,40 @@
             this.tabPageHome.Controls.Add(this.txtNombre);
             this.tabPageHome.Controls.Add(this.dgvDatos);
             this.tabPageHome.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.epValidacion.SetIconAlignment(this.tabPageHome, System.Windows.Forms.ErrorIconAlignment.BottomRight);
             this.tabPageHome.ImageKey = "imgHome.png";
             this.tabPageHome.Location = new System.Drawing.Point(4, 39);
-            this.tabPageHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPageHome.Name = "tabPageHome";
-            this.tabPageHome.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageHome.Size = new System.Drawing.Size(1162, 726);
+            this.tabPageHome.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageHome.Size = new System.Drawing.Size(996, 649);
             this.tabPageHome.TabIndex = 0;
-            this.tabPageHome.Text = "Home";
+            this.tabPageHome.Text = "Inicio";
             this.tabPageHome.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(899, 42);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(58, 39);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolver.BackgroundImage")));
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Location = new System.Drawing.Point(843, 42);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(50, 39);
+            this.btnVolver.TabIndex = 17;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnBuscar
             // 
@@ -104,10 +127,9 @@
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(807, 52);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(692, 42);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(53, 48);
+            this.btnBuscar.Size = new System.Drawing.Size(45, 39);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -122,8 +144,7 @@
             this.txtBuscar.HideSelection = true;
             this.txtBuscar.Hint = "Buscar";
             this.txtBuscar.LeadingIcon = null;
-            this.txtBuscar.Location = new System.Drawing.Point(404, 52);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscar.Location = new System.Drawing.Point(346, 42);
             this.txtBuscar.MaxLength = 32767;
             this.txtBuscar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtBuscar.Name = "txtBuscar";
@@ -135,7 +156,7 @@
             this.txtBuscar.SelectionLength = 0;
             this.txtBuscar.SelectionStart = 0;
             this.txtBuscar.ShortcutsEnabled = true;
-            this.txtBuscar.Size = new System.Drawing.Size(384, 48);
+            this.txtBuscar.Size = new System.Drawing.Size(329, 48);
             this.txtBuscar.TabIndex = 12;
             this.txtBuscar.TabStop = false;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -149,13 +170,13 @@
             this.btnEliminar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnEliminar.Depth = 0;
             this.btnEliminar.HighEmphasis = true;
-            this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(19, 711);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnEliminar.Icon = global::pryTienda.Properties.Resources.ImgEliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(16, 578);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Size = new System.Drawing.Size(298, 46);
+            this.btnEliminar.Size = new System.Drawing.Size(255, 37);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -170,13 +191,13 @@
             this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnModificar.Depth = 0;
             this.btnModificar.HighEmphasis = true;
-            this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(18, 639);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnModificar.Icon = global::pryTienda.Properties.Resources.imgModificar;
+            this.btnModificar.Location = new System.Drawing.Point(15, 519);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnModificar.Size = new System.Drawing.Size(298, 46);
+            this.btnModificar.Size = new System.Drawing.Size(255, 37);
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -191,13 +212,13 @@
             this.btnAgregar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnAgregar.Depth = 0;
             this.btnAgregar.HighEmphasis = true;
-            this.btnAgregar.Icon = null;
-            this.btnAgregar.Location = new System.Drawing.Point(18, 565);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btnAgregar.Icon = global::pryTienda.Properties.Resources.imgAgregar;
+            this.btnAgregar.Location = new System.Drawing.Point(15, 459);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAgregar.Size = new System.Drawing.Size(298, 46);
+            this.btnAgregar.Size = new System.Drawing.Size(255, 37);
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -215,8 +236,7 @@
             this.txtStock.HideSelection = true;
             this.txtStock.Hint = "Stock";
             this.txtStock.LeadingIcon = null;
-            this.txtStock.Location = new System.Drawing.Point(19, 470);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStock.Location = new System.Drawing.Point(16, 382);
             this.txtStock.MaxLength = 32767;
             this.txtStock.MouseState = MaterialSkin.MouseState.OUT;
             this.txtStock.Name = "txtStock";
@@ -228,7 +248,7 @@
             this.txtStock.SelectionLength = 0;
             this.txtStock.SelectionStart = 0;
             this.txtStock.ShortcutsEnabled = true;
-            this.txtStock.Size = new System.Drawing.Size(296, 48);
+            this.txtStock.Size = new System.Drawing.Size(254, 48);
             this.txtStock.TabIndex = 8;
             this.txtStock.TabStop = false;
             this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -246,8 +266,7 @@
             this.txtPrecio.HideSelection = true;
             this.txtPrecio.Hint = "Precio";
             this.txtPrecio.LeadingIcon = null;
-            this.txtPrecio.Location = new System.Drawing.Point(19, 362);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecio.Location = new System.Drawing.Point(16, 294);
             this.txtPrecio.MaxLength = 32767;
             this.txtPrecio.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPrecio.Name = "txtPrecio";
@@ -259,7 +278,7 @@
             this.txtPrecio.SelectionLength = 0;
             this.txtPrecio.SelectionStart = 0;
             this.txtPrecio.ShortcutsEnabled = true;
-            this.txtPrecio.Size = new System.Drawing.Size(296, 48);
+            this.txtPrecio.Size = new System.Drawing.Size(254, 48);
             this.txtPrecio.TabIndex = 7;
             this.txtPrecio.TabStop = false;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -282,12 +301,11 @@
             this.cmbCategoria.Hint = "Categorías";
             this.cmbCategoria.IntegralHeight = false;
             this.cmbCategoria.ItemHeight = 43;
-            this.cmbCategoria.Location = new System.Drawing.Point(19, 260);
-            this.cmbCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCategoria.Location = new System.Drawing.Point(16, 211);
             this.cmbCategoria.MaxDropDownItems = 4;
             this.cmbCategoria.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(296, 49);
+            this.cmbCategoria.Size = new System.Drawing.Size(254, 49);
             this.cmbCategoria.StartIndex = 0;
             this.cmbCategoria.TabIndex = 6;
             // 
@@ -301,8 +319,7 @@
             this.txtDesc.HideSelection = true;
             this.txtDesc.Hint = "Descripcion";
             this.txtDesc.LeadingIcon = null;
-            this.txtDesc.Location = new System.Drawing.Point(19, 151);
-            this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesc.Location = new System.Drawing.Point(16, 123);
             this.txtDesc.MaxLength = 32767;
             this.txtDesc.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDesc.Name = "txtDesc";
@@ -314,7 +331,7 @@
             this.txtDesc.SelectionLength = 0;
             this.txtDesc.SelectionStart = 0;
             this.txtDesc.ShortcutsEnabled = true;
-            this.txtDesc.Size = new System.Drawing.Size(296, 48);
+            this.txtDesc.Size = new System.Drawing.Size(254, 48);
             this.txtDesc.TabIndex = 4;
             this.txtDesc.TabStop = false;
             this.txtDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -332,8 +349,7 @@
             this.txtNombre.HideSelection = true;
             this.txtNombre.Hint = "Nombre";
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(19, 52);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(16, 42);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Name = "txtNombre";
@@ -345,7 +361,7 @@
             this.txtNombre.SelectionLength = 0;
             this.txtNombre.SelectionStart = 0;
             this.txtNombre.ShortcutsEnabled = true;
-            this.txtNombre.Size = new System.Drawing.Size(296, 48);
+            this.txtNombre.Size = new System.Drawing.Size(254, 48);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.TabStop = false;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -359,22 +375,22 @@
             this.dgvDatos.AllowUserToResizeColumns = false;
             this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(404, 117);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatos.Location = new System.Drawing.Point(346, 95);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(713, 629);
+            this.dgvDatos.Size = new System.Drawing.Size(611, 511);
             this.dgvDatos.TabIndex = 1;
             this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
             // 
             // tabPageSalir
             // 
+            this.tabPageSalir.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageSalir.ImageKey = "imgSalir.png";
             this.tabPageSalir.Location = new System.Drawing.Point(4, 39);
-            this.tabPageSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPageSalir.Name = "tabPageSalir";
-            this.tabPageSalir.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageSalir.Size = new System.Drawing.Size(1163, 726);
+            this.tabPageSalir.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSalir.Size = new System.Drawing.Size(996, 649);
             this.tabPageSalir.TabIndex = 1;
             this.tabPageSalir.Text = "Salir";
             this.tabPageSalir.UseVisualStyleBackColor = true;
@@ -383,52 +399,22 @@
             // 
             this.imgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgList.ImageStream")));
             this.imgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgList.Images.SetKeyName(0, "imgHome.png");
-            this.imgList.Images.SetKeyName(1, "imgBuscar.png");
+            this.imgList.Images.SetKeyName(0, "imgSalir.png");
+            this.imgList.Images.SetKeyName(1, "imgHome.png");
             // 
             // epValidacion
             // 
             this.epValidacion.ContainerControl = this;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVolver.BackgroundImage")));
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Location = new System.Drawing.Point(983, 52);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(58, 48);
-            this.btnVolver.TabIndex = 17;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(1049, 52);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(68, 48);
-            this.btnCancelar.TabIndex = 18;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 852);
+            this.ClientSize = new System.Drawing.Size(1010, 759);
             this.Controls.Add(this.tabCtrlMenu);
             this.DrawerTabControl = this.tabCtrlMenu;
-            this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmInicio";
-            this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda";
             this.Load += new System.EventHandler(this.frmInicio_Load);

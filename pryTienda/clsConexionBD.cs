@@ -12,9 +12,10 @@ namespace pryTienda
     internal class clsConexionBD
     {
         //cadena de conexion
-        string cadena = "Server=localhost;Database=Comercio;Trusted_Connection=True;";
+        string cadena = "Server = localhost\\SQLEXPRESS;Database=Comercio;Trusted_Connection=True;";
 
-        ////
+        //"Server=localhost;Database=Comercio;Trusted_Connection=True;";//
+
 
         //conector
         SqlConnection conexion;
