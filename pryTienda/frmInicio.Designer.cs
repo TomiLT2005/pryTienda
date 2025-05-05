@@ -89,7 +89,7 @@
             this.tabPageHome.ImageKey = "imgHome.png";
             this.tabPageHome.Location = new System.Drawing.Point(4, 39);
             this.tabPageHome.Name = "tabPageHome";
-            this.tabPageHome.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageHome.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageHome.Size = new System.Drawing.Size(996, 649);
             this.tabPageHome.TabIndex = 0;
             this.tabPageHome.Text = "Inicio";
@@ -379,7 +379,7 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(611, 511);
+            this.dgvDatos.Size = new System.Drawing.Size(631, 511);
             this.dgvDatos.TabIndex = 1;
             this.dgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellClick);
             // 
@@ -389,7 +389,7 @@
             this.tabPageSalir.ImageKey = "imgSalir.png";
             this.tabPageSalir.Location = new System.Drawing.Point(4, 39);
             this.tabPageSalir.Name = "tabPageSalir";
-            this.tabPageSalir.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSalir.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSalir.Size = new System.Drawing.Size(996, 649);
             this.tabPageSalir.TabIndex = 1;
             this.tabPageSalir.Text = "Salir";

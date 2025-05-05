@@ -18,10 +18,12 @@ namespace pryTienda
         clsConexionBD conexion = new clsConexionBD();
 
 
-        //Variable para guardar el codigo seleccionado//
+        //Variable para guardar el código seleccionado
         public int codigoSeleccionado = 0;
 
 
+
+        //Inicializa el formulario con tema oscuro y colores personalizados
         public frmInicio()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace pryTienda
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
+            //Esquema de colores personalizado para el formulario
             materialSkinManager.ColorScheme = new ColorScheme(
             Primary.Red700,   // Rojo fuerte para los elementos principales
             Primary.Red900,   // Rojo más oscuro para los elementos secundarios
@@ -40,15 +43,19 @@ namespace pryTienda
         }
 
 
+
+        //Evento de carga del formulario
         private void frmInicio_Load(object sender, EventArgs e)
         {
             conexion.ConectarBD();
             conexion.ListarBD(dgvDatos);
             conexion.Cargarcategorias(cmbCategoria);
-            EstilizarDataGridView(dgvDatos);
+            EstiloDataGridView(dgvDatos);
         }
 
 
+
+        //Evento para salir de la Aplicación
         private void tabCtrlMenu_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if (e.TabPage == tabPageSalir)
@@ -67,8 +74,8 @@ namespace pryTienda
         }
 
 
-        //Eventos de Botones Primarios (Agregar, Modificar y Eliminar)//
 
+        //Eventos de Botones Primarios (Agregar, Modificar y Eliminar)//
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (validarCampos())
@@ -232,7 +239,6 @@ namespace pryTienda
         }
 
 
-  
         private void LimpiarCampos(MaterialTextBox2 txtNombre, MaterialTextBox2 txtDesc, MaterialTextBox2 txtPrecio, MaterialTextBox2 txtStock, MaterialComboBox cmbCategoria)
         {
             txtNombre.Text = "";
@@ -288,51 +294,51 @@ namespace pryTienda
 
 
 
-        //Estilo al DataGridView///
-        private void EstilizarDataGridView(DataGridView dgv)
+        //Estilo al DataGridView
+        private void EstiloDataGridView(DataGridView dgv)
         {
             dgv.EnableHeadersVisualStyles = false; // Evitar el estilo predeterminado de encabezados de columna
 
-            // Fondo general (oscuro pero elegante)
-            dgv.BackgroundColor = Color.FromArgb(18, 18, 18); // Fondo oscuro
+            //Fondo general
+            dgv.BackgroundColor = Color.FromArgb(18, 18, 18); 
             dgv.BorderStyle = BorderStyle.None;
 
-            // Estilo de cabecera (fondo oscuro con una sombra suave y texto en blanco)
-            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 26, 26); // Gris oscuro
+            //Estilo de cabecera
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 26, 26);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("YaHei", 11, FontStyle.Bold);
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
-            // Bordes suaves en la cabecera
+            //Bordes suaves en la cabecera
             dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
-            // Estilo de celdas (más oscuro y contrastante con el texto blanco)
-            dgv.DefaultCellStyle.BackColor = Color.FromArgb(33, 33, 33); // Gris oscuro para las celdas
+            // Estilo de celdas
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(33, 33, 33); 
             dgv.DefaultCellStyle.ForeColor = Color.White;
-            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 9); // Tipografía moderna
-            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(66, 66, 66); // Color suave al seleccionar una fila
-            dgv.DefaultCellStyle.SelectionForeColor = Color.Red; // Texto rojo para selección
+            dgv.DefaultCellStyle.Font = new Font("YaHei", 10);                      //Tipografía
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(66, 66, 66);   //Selección
+            dgv.DefaultCellStyle.SelectionForeColor = Color.Salmon;                 //Texto para selección
 
-            // Bordes suaves alrededor de las celdas
-            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal; // Bordes horizontales de las celdas
-            dgv.GridColor = Color.FromArgb(50, 50, 50); // Gris suave para las líneas de la cuadrícula
+            //Bordes
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.GridColor = Color.FromArgb(50, 50, 50); 
 
-            // Personalizar filas
-            dgv.RowsDefaultCellStyle.BackColor = Color.FromArgb(24, 24, 24); // Fondo más oscuro para las filas
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(36, 36, 36); // Alternar filas más suaves
+            //Personalizar filas
+            dgv.RowsDefaultCellStyle.BackColor = Color.FromArgb(24, 24, 24);
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(36, 36, 36); 
 
-            // Eliminamos bordes en las filas y cabecera
+            //Eliminamos bordes en las filas y cabecera
             dgv.RowHeadersVisible = false;
 
-            // Desactivar botones de agregados y eliminación de filas
+            //Desactivar botones de agregados, eliminación de filas y solamente Leer
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToDeleteRows = false;
             dgv.AllowUserToResizeRows = false;
-            dgv.ReadOnly = true; // Sólo lectura para mayor control
+            dgv.ReadOnly = true;
 
-            // Hacer que el DataGridView sea más limpio (sin líneas extra)
-            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Selección de fila completa
-            dgv.MultiSelect = false; // Permitir sólo una selección a la vez
+            //Selección de filas
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
+            dgv.MultiSelect = false; 
         }
 
         
