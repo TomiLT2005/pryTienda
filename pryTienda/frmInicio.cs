@@ -24,9 +24,11 @@ namespace pryTienda
 
 
         //Inicializa el formulario con tema oscuro y colores personalizados
-        public frmInicio()
+        public frmInicio(string nombreUsuario)
         {
             InitializeComponent();
+
+            lblUsuario.Text = "Hola " + nombreUsuario + "!";
 
             MaterialSkinManager materialSkinManager =  MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -349,7 +351,5 @@ namespace pryTienda
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect; 
             dgv.MultiSelect = false; 
         }
-
-       
     }
 }

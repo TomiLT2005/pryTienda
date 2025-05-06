@@ -67,7 +67,7 @@ namespace pryTienda
 
                 if (resultado)
                 {
-                    frmInicio ventana = new frmInicio();
+                    frmInicio ventana = new frmInicio(usuario.Nombre);
                     this.Hide();
                     ventana.ShowDialog();
                 }
@@ -80,6 +80,7 @@ namespace pryTienda
                     {
                         MessageBox.Show("Has alcanzado el límite de intentos. Contacta con el administrador.", "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         btnIngresar.Enabled = false;
+                        LimpiarCampos();
                     }
                 }
             }
@@ -109,6 +110,16 @@ namespace pryTienda
             }
         }
 
-        
+
+
+        //Limpiar Campos
+        private void LimpiarCampos()
+        {
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
+            txtUsuario.Enabled = false;
+            txtContraseña.Enabled = false;
+        }
+
     }
 }

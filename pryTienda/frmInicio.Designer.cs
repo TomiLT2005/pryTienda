@@ -48,6 +48,7 @@
             this.tabPageSalir = new System.Windows.Forms.TabPage();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.tabCtrlMenu.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -72,6 +73,7 @@
             // 
             // tabPageHome
             // 
+            this.tabPageHome.Controls.Add(this.lblUsuario);
             this.tabPageHome.Controls.Add(this.btnCancelar);
             this.tabPageHome.Controls.Add(this.btnVolver);
             this.tabPageHome.Controls.Add(this.btnBuscar);
@@ -101,7 +103,7 @@
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(899, 42);
+            this.btnCancelar.Location = new System.Drawing.Point(932, 51);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(58, 39);
             this.btnCancelar.TabIndex = 18;
@@ -114,7 +116,7 @@
             this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnVolver.FlatAppearance.BorderSize = 0;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Location = new System.Drawing.Point(843, 42);
+            this.btnVolver.Location = new System.Drawing.Point(885, 51);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(50, 39);
             this.btnVolver.TabIndex = 17;
@@ -127,7 +129,7 @@
             this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(692, 42);
+            this.btnBuscar.Location = new System.Drawing.Point(692, 51);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(45, 39);
             this.btnBuscar.TabIndex = 16;
@@ -144,7 +146,7 @@
             this.txtBuscar.HideSelection = true;
             this.txtBuscar.Hint = "Buscar";
             this.txtBuscar.LeadingIcon = null;
-            this.txtBuscar.Location = new System.Drawing.Point(346, 42);
+            this.txtBuscar.Location = new System.Drawing.Point(346, 51);
             this.txtBuscar.MaxLength = 32767;
             this.txtBuscar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtBuscar.Name = "txtBuscar";
@@ -172,7 +174,7 @@
             this.btnEliminar.Depth = 0;
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = global::pryTienda.Properties.Resources.ImgEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(16, 578);
+            this.btnEliminar.Location = new System.Drawing.Point(16, 603);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -193,7 +195,7 @@
             this.btnModificar.Depth = 0;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = global::pryTienda.Properties.Resources.imgModificar;
-            this.btnModificar.Location = new System.Drawing.Point(15, 519);
+            this.btnModificar.Location = new System.Drawing.Point(15, 554);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -214,7 +216,7 @@
             this.btnAgregar.Depth = 0;
             this.btnAgregar.HighEmphasis = true;
             this.btnAgregar.Icon = global::pryTienda.Properties.Resources.imgAgregar;
-            this.btnAgregar.Location = new System.Drawing.Point(15, 459);
+            this.btnAgregar.Location = new System.Drawing.Point(15, 505);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAgregar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAgregar.Name = "btnAgregar";
@@ -237,7 +239,7 @@
             this.txtStock.HideSelection = true;
             this.txtStock.Hint = "Stock";
             this.txtStock.LeadingIcon = null;
-            this.txtStock.Location = new System.Drawing.Point(16, 382);
+            this.txtStock.Location = new System.Drawing.Point(16, 415);
             this.txtStock.MaxLength = 32767;
             this.txtStock.MouseState = MaterialSkin.MouseState.OUT;
             this.txtStock.Name = "txtStock";
@@ -267,7 +269,7 @@
             this.txtPrecio.HideSelection = true;
             this.txtPrecio.Hint = "Precio";
             this.txtPrecio.LeadingIcon = null;
-            this.txtPrecio.Location = new System.Drawing.Point(16, 294);
+            this.txtPrecio.Location = new System.Drawing.Point(16, 303);
             this.txtPrecio.MaxLength = 32767;
             this.txtPrecio.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPrecio.Name = "txtPrecio";
@@ -302,7 +304,7 @@
             this.cmbCategoria.Hint = "Categorías";
             this.cmbCategoria.IntegralHeight = false;
             this.cmbCategoria.ItemHeight = 43;
-            this.cmbCategoria.Location = new System.Drawing.Point(16, 211);
+            this.cmbCategoria.Location = new System.Drawing.Point(16, 220);
             this.cmbCategoria.MaxDropDownItems = 4;
             this.cmbCategoria.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbCategoria.Name = "cmbCategoria";
@@ -320,7 +322,7 @@
             this.txtDesc.HideSelection = true;
             this.txtDesc.Hint = "Descripcion";
             this.txtDesc.LeadingIcon = null;
-            this.txtDesc.Location = new System.Drawing.Point(16, 123);
+            this.txtDesc.Location = new System.Drawing.Point(16, 132);
             this.txtDesc.MaxLength = 32767;
             this.txtDesc.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDesc.Name = "txtDesc";
@@ -350,7 +352,7 @@
             this.txtNombre.HideSelection = true;
             this.txtNombre.Hint = "Nombre";
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(16, 42);
+            this.txtNombre.Location = new System.Drawing.Point(16, 51);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Name = "txtNombre";
@@ -376,7 +378,7 @@
             this.dgvDatos.AllowUserToResizeColumns = false;
             this.dgvDatos.AllowUserToResizeRows = false;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(346, 95);
+            this.dgvDatos.Location = new System.Drawing.Point(346, 104);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -407,6 +409,18 @@
             // 
             this.epValidacion.ContainerControl = this;
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Depth = 0;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(890, 17);
+            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(17, 19);
+            this.lblUsuario.TabIndex = 22;
+            this.lblUsuario.Text = "....";
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +435,7 @@
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.tabCtrlMenu.ResumeLayout(false);
             this.tabPageHome.ResumeLayout(false);
+            this.tabPageHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epValidacion)).EndInit();
             this.ResumeLayout(false);
@@ -447,6 +462,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCancelar;
+        private MaterialSkin.Controls.MaterialLabel lblUsuario;
     }
 }
 
