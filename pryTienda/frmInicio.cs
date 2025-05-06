@@ -220,6 +220,15 @@ namespace pryTienda
             }
         }
 
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras");
+            }
+        }
+
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -341,6 +350,6 @@ namespace pryTienda
             dgv.MultiSelect = false; 
         }
 
-        
+       
     }
 }
