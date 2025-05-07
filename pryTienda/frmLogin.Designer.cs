@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtUsuario = new MaterialSkin.Controls.MaterialTextBox2();
             this.txtContraseña = new MaterialSkin.Controls.MaterialTextBox2();
             this.btnOcultar = new System.Windows.Forms.Button();
@@ -41,12 +42,12 @@
             this.txtUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtUsuario.Depth = 0;
-            this.txtUsuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsuario.HideSelection = true;
             this.txtUsuario.Hint = "Usuario";
             this.txtUsuario.LeadingIcon = null;
             this.txtUsuario.Location = new System.Drawing.Point(28, 139);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsuario.Name = "txtUsuario";
@@ -76,7 +77,7 @@
             this.txtContraseña.Hint = "Contraseña";
             this.txtContraseña.LeadingIcon = null;
             this.txtContraseña.Location = new System.Drawing.Point(28, 218);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.MaxLength = 32767;
             this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.txtContraseña.Name = "txtContraseña";
@@ -101,7 +102,7 @@
             this.btnOcultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOcultar.Image = global::pryTienda.Properties.Resources.imgOjoCerrado;
             this.btnOcultar.Location = new System.Drawing.Point(324, 186);
-            this.btnOcultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOcultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnOcultar.Name = "btnOcultar";
             this.btnOcultar.Size = new System.Drawing.Size(41, 36);
             this.btnOcultar.TabIndex = 2;
@@ -161,7 +162,8 @@
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Padding = new System.Windows.Forms.Padding(4, 79, 4, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

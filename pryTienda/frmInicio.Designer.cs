@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.tabCtrlMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPageHome = new System.Windows.Forms.TabPage();
+            this.lblUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.tabPageSalir = new System.Windows.Forms.TabPage();
             this.imgList = new System.Windows.Forms.ImageList(this.components);
             this.epValidacion = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblUsuario = new MaterialSkin.Controls.MaterialLabel();
             this.tabCtrlMenu.SuspendLayout();
             this.tabPageHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -96,6 +96,18 @@
             this.tabPageHome.TabIndex = 0;
             this.tabPageHome.Text = "Inicio";
             this.tabPageHome.UseVisualStyleBackColor = true;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Depth = 0;
+            this.lblUsuario.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblUsuario.Location = new System.Drawing.Point(890, 17);
+            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(17, 19);
+            this.lblUsuario.TabIndex = 22;
+            this.lblUsuario.Text = "....";
             // 
             // btnCancelar
             // 
@@ -409,18 +421,6 @@
             // 
             this.epValidacion.ContainerControl = this;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Depth = 0;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(890, 17);
-            this.lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(17, 19);
-            this.lblUsuario.TabIndex = 22;
-            this.lblUsuario.Text = "....";
-            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +429,7 @@
             this.Controls.Add(this.tabCtrlMenu);
             this.DrawerTabControl = this.tabCtrlMenu;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda";
